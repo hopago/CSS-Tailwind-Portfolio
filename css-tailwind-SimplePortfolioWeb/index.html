@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,800;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,700&family=Roboto:wght@300;400;500;700&family=Sen:wght@400;500;700&family=Urbanist:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,100;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Tailwind UI</title>
+    <style>
+        * {
+            transition: all 0.7s ease;
+        }
+    </style>
+</head>
+<body class="font-nunito overflow-x-hidden">
+    <!-- 인트로 -->
+    <div class="h-screen w-screen lg:h-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden dark:to-slate-800 dark:to-slate900">
+        <!-- navbar -->
+        <nav class="fixed top-0 w-full bg-white z-10 dark:bg-slate-900">
+            <div class="container mx-auto py-5 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <img 
+                      src="https://w7.pngwing.com/pngs/121/286/png-transparent-apple-logo-computer-icons-apple-logo-company-heart-logo.png" 
+                      alt=""
+                      class="w-8"
+                    >
+                    <span class="text-2xl font-bold text-indigo-900 dark:text-white">SimpleWind.</span>
+                </div>
+                <ul class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase">
+                    <li class="hover:text-gray-500">
+                        <a href="#">Homepage</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#about">About me</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#services">Services</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#portfolio">Work</a>
+                    </li>
+                    <li class="hover:text-gray-500">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <img 
+                  src="https://static.vecteezy.com/system/resources/previews/013/453/247/original/golden-ramadan-moon-free-png.png" 
+                  class="hidden md:block w-5 cursor-pointer" 
+                  alt="" 
+                  id="moon"
+                />
+                <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-30">
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                </div>
+                <ul id="menu" class="hidden bg-indigo-300 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                    <li>
+                        <a id="hLink" href="#">Homepage</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#about">About me</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#work">Work</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            <!-- intro content -->
+            <!-- image -->
+        <img 
+            src="./img/man.png" 
+            alt=""
+            class="absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover"
+        >
+        <!-- background circle -->
+        <div class="hidden lg:block absolute right-0 left-0 mx-auto -bottom-1/4 w-big h-big bg-indigo-400 rounded-full -z-10"></div>
+        <!-- animated text -->
+        <div class="absolute top-1/3 left-5 text-xl sm:left-0 sm:text-4xl md:left-1/5 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold">
+            <span class="text-gray-600 dark:text-white">Freelance</span>
+            <p id="text" class="text-red-500"></p>
+        </div>
+        <!-- texts -->
+        <div class="hidden lg:flex flex-col gap-5 rounded-md shadow-xl absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit w-1/3 dark:bg-slate-900 dark:shadow-slate-800">
+            <h1 class="text-4xl font-bold text-indigo-900 dark:text-indigo-400">Hi I'm Hopago</h1>
+            <p class="text-gray dark:text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iure.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, est.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, porro.
+            </p>
+            <a class="bg-indigo-600 text-white text-xl px-3 py-2 w-fit rounded-md font-semibold" href="#contact">Contact Me</a>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+        <div class="container py-40 mx-auto flex flex-col-reverse lg:flex-row items-center gap-20">
+            <div class="relative">
+                <img src="./img/dots.png" alt="" class="w-1/4 h-1/4 absolute top-0 left-0 -z-10">
+                <div class="h-full rounded-full overflow-hidden">
+                    <img class="object-cover" src="./img/KakaoTalk_20200217_151105000.jpg" alt="">
+                </div>
+            </div>
+            <div class="my-auto flex flex-col gap-3 w-1/3">
+                <h1 class="text-indigo-600 font-bold dark:text-indigo-300">About me</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Better Experience</h1>
+                <p class="text-gray-400">
+                    I design and build digital products.
+                </p>
+                <h2 class="text-gray-400 font-medium">HTML</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">CSS</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+                <h2 class="text-gray-400 font-medium">JavaScript</h2>
+                <div class="w-full bg-gray-200 h-1.5 rounded-md">
+                    <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services" class="dark:bg-slate-900">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold">SERVICES</h1>
+                <h1 class="text-3xl font-bold dark:text-white">What do I offer?</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                  My approach to website design is to create a website that strengthens your company.
+                </p>
+            </div>
+            <!-- bottom -->
+            <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+                <div class="w-full md:w-4/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 p-5 flex flex-col gap-5">
+                    <img src="./img/icon.png" alt="" class="w-10">
+                    <h1 class="font-medium text-lg dark:text-white">UI / UX Design</h1>
+                    <p class="text-gray-400">I specialize in creating interactive websites for individuals and small business.</p>
+                    <a class="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 p-5 flex flex-col gap-5">
+                    <img src="./img/icon.png" alt="" class="w-10">
+                    <h1 class="font-medium text-lg dark:text-white">UI / UX Design</h1>
+                    <p class="text-gray-400">I specialize in creating interactive websites for individuals and small business.</p>
+                    <a class="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 p-5 flex flex-col gap-5">
+                    <img src="./img/icon.png" alt="" class="w-10">
+                    <h1 class="font-medium text-lg dark:text-white">UI / UX Design</h1>
+                    <p class="text-gray-400">I specialize in creating interactive websites for individuals and small business.</p>
+                    <a class="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 p-5 flex flex-col gap-5">
+                    <img src="./img/icon.png" alt="" class="w-10">
+                    <h1 class="font-medium text-lg dark:text-white">UI / UX Design</h1>
+                    <p class="text-gray-400">I specialize in creating interactive websites for individuals and small business.</p>
+                    <a class="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 p-5 flex flex-col gap-5">
+                    <img src="./img/icon.png" alt="" class="w-10">
+                    <h1 class="font-medium text-lg dark:text-white">UI / UX Design</h1>
+                    <p class="text-gray-400">I specialize in creating interactive websites for individuals and small business.</p>
+                    <a class="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+                </div>
+                <div class="w-full md:w-4/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 p-5 flex flex-col gap-5">
+                    <img src="./img/icon.png" alt="" class="w-10">
+                    <h1 class="font-medium text-lg dark:text-white">UI / UX Design</h1>
+                    <p class="text-gray-400">I specialize in creating interactive websites for individuals and small business.</p>
+                    <a class="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div id="portfolio" class="py-40 dark:bg-slate-900">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold">Portfolio</h1>
+                <h1 class="text-3xl font-bold dark:text-white">Work & Projects</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                  I help designers, small agencies and businesses bring their ideas to life.
+                </p>
+            </div>
+            <!-- bottom -->
+            <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/5 md:w-5/12 shadow-xl dark:shadow-indigo-400 rounded-lg my-3 md:my-7 m-1 gap-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact" class="dark:bg-slate-900">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold">Contact</h1>
+                <h1 class="text-3xl font-bold dark:text-white">Have Question?</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                  Do you have an idea? Let's discuss it and see what we can do together.
+                </p>
+            </div>
+            <!-- bottom -->
+            <form class="mt-5 p-8 flex flex-col gap-5 items-center">
+                <input class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 dark:bg-slate-800 dark:ring-0 dark:text-white rounded-sm" type="text" placeholder="Name">
+                <input class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 dark:bg-slate-800 dark:ring-0 dark:text-white rounded-sm" type="text" placeholder="Email">
+                <textarea class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 dark:bg-slate-800 dark:ring-0 dark:text-white rounded-sm" cols="30" rows="10" placeholder="Message"></textarea>
+                <button class="w-1/2 md:w-1/4 bg-indigo-600 text-white font-medium px-3 py-2 cursor-pointer rounded-md">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="top-0 w-full bg-gray-800">
+        <div class="container mx-auto py-5 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img 
+                  src="https://w7.pngwing.com/pngs/121/286/png-transparent-apple-logo-computer-icons-apple-logo-company-heart-logo.png" 
+                  alt=""
+                  class="w-8"
+                >
+                <span class="text-2xl font-bold text-white">SimpleWind.</span>
+            </div>
+            <span class="hidden md:block text-white font-medium">@ 2023 SimpleWind. Design with tailwind.</span>
+            <div class="flex gap-2">
+                <img class="w-4 cursor-pointer" src="./img/facebook.png" alt="">
+                <img class="w-4 cursor-pointer" src="./img/instagram.png" alt="">
+                <img class="w-4 cursor-pointer" src="./img/twitter.png" alt="">
+                <img class="w-4 cursor-pointer" src="./img/linkedin.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
+</body>
+</html>
